@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.campbelllandscaping.com
+
+# Sitemaps
+Sitemap: https://www.campbelllandscaping.com/sitemap.xml
