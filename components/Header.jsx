@@ -28,7 +28,7 @@ const Header = () => {
         {/* Logo clicável no centro */}
         <Link
           href="/"
-          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px]"
+          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[120px]"
         >
           <span className="block w-full h-full" />
         </Link>
