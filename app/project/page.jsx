@@ -21,7 +21,7 @@ const ProjectPage = () => {
   return (
     <main className="bg-white min-h-screen py-20 pt-[220px] md:pt-[250px] px-4 flex flex-col items-center">
       {/* Título */}
-      <h1 className="text-3xl font-primary uppercase text-center mb-12">Projects</h1>
+      <h1 className="text-3xl font-bold font-primary uppercase text-center mb-12">Projects</h1>
 
       {/* Texto introdutório com consistência */}
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-base text-justify leading-relaxed font-sans mb-16">

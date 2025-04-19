@@ -31,9 +31,12 @@ const Hero = () => {
         {heroItems.map((item, index) => (
           <div key={index} className="text-center">
             <Link href={item.path} className="group block">
-              <h2 className="mb-4 text-lg font-primary uppercase transition-all duration-200 group-hover:font-bold">
+              {/* Título - mobile (em cima da imagem) */}
+              <h2 className="mb-4 font-bold tracking-[1.2px] text-lg font-primary uppercase transition-all duration-200 group-hover:font-bold block md:hidden">
                 {item.title}
               </h2>
+
+              {/* Imagem */}
               <div className="w-full aspect-square relative overflow-hidden">
                 <Image
                   src={item.src}
@@ -42,6 +45,11 @@ const Hero = () => {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
+
+              {/* Título - desktop (embaixo da imagem) */}
+              <h2 className="mt-4 font-bold tracking-[1.2px] text-lg font-primary uppercase transition-all duration-200 group-hover:font-bold hidden md:block">
+                {item.title}
+              </h2>
             </Link>
           </div>
         ))}

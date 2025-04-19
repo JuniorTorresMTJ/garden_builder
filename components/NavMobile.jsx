@@ -41,7 +41,7 @@ const NavMobile = () => {
       >
         <RiMenu3Fill />
       </SheetTrigger>
-      <SheetContent className="bg-white border-none text-primary">
+      <SheetContent className="bg-white border-none font-bold text-primary">
         <div className="flex flex-col pt-16 pb-8 items-center justify-between h-full">
           <SheetHeader>
             <SheetDescription className="sr-only">
@@ -58,7 +58,7 @@ const NavMobile = () => {
               >
                 <Link
                   href={link.path}
-                  className="cursor-pointer hover:text-accent transition-colors"
+                  className="cursor-pointer font-bold transition-colors"
                   onClick={() => setIsOpen(false)} // fecha o menu ao clicar
                 >
                   {link.name}

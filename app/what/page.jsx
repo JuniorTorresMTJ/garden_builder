@@ -27,7 +27,7 @@ const serviceItems = [
 const WhatWeDoPage = () => {
   return (
     <main className="bg-white min-h-screen pt-[220px] md:pt-[250px] flex flex-col items-center justify-center py-20 px-4">
-           <h1 className="text-3xl font-primary text-center mb-12">What We Do</h1>
+           <h1 className="text-3xl font-bold font-primary text-center mb-12">What We Do</h1>
       {/* Texto introdutório */}
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-base text-justify leading-relaxed font-sans mb-16">
   <p>
@@ -48,7 +48,7 @@ const WhatWeDoPage = () => {
       key={index}
       className="group text-center block"
     >
-      <h2 className="mb-4 text-lg font-primary transition-all uppercase duration-200 group-hover:font-bold">
+      <h2 className="mb-4 font-bold text-lg font-primary transition-all uppercase duration-200 group-hover:font-bold">
         {item.title}
       </h2>
       <div className="w-full aspect-square relative overflow-hidden">

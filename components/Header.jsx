@@ -1,29 +1,30 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // components
 import NavMobile from "./NavMobile";
 import Socials from "./Socials";
 
 const links = [
-  {
-    name: "What we do",
-    path: "/what",
-  },
-  {
-    name: "Projects",
-    path: "/project",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
+  { name: "What we do", path: "/what" },
+  { name: "Projects", path: "/project" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const backgroundImage = isHome
+    ? "bg-[url('/Logo.gif')]"
+    : "bg-[url('/Logo_without.gif')]";
+
   return (
-    <header className="bg-[url('/Logo.gif')] bg-center bg-no-repeat bg-cover lg:bg-contain h-[200px] w-full fixed top-0 left-0 z-50">
+    <header
+      className={`${backgroundImage} bg-center bg-no-repeat bg-cover lg:bg-contain h-[200px] w-full fixed top-0 left-0 z-50`}
+    >
       <div className="container mx-auto h-full relative flex items-center justify-end px-4">
         {/* Logo clicável no centro */}
         <Link
@@ -32,17 +33,18 @@ const Header = () => {
         >
           <span className="block w-full h-full" />
         </Link>
+
         {/* Nav desktop */}
         <nav className="hidden xl:flex items-center gap-8">
           <ul className="flex">
             {links.map((link, index) => (
               <li
                 key={index}
-                className="text-primary text-sm uppercase font-primary font-medium tracking-[1.2px] after:mx-4 last:after:content-none after:text-accent"
+                className="text-primary text-sm uppercase font-primary font-bold tracking-[1.2px] after:mx-4 last:after:content-none"
               >
                 <Link
                   href={link.path}
-                  className="cursor-pointer relative text-primary text-sm uppercase font-primary font-medium tracking-[1.2px] before:content-[''] before:absolute before:-bottom-1 before:left-0 before:h-[2px] before:w-0 before:bg-accent before:transition-all before:duration-300 hover:before:w-full"
+                  className="cursor-pointer text-primary text-sm uppercase font-primary font-bold no-underline transition-colors"
                 >
                   {link.name}
                 </Link>
